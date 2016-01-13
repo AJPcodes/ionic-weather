@@ -26,7 +26,6 @@ angular.module('weather.controllers', [])
     });
 
     this.startSearch = function(keyEvent){
-        console.log('keypress!');
         if (keyEvent.which === 13)
         this.search();
     };

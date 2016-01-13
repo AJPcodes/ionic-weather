@@ -24,6 +24,23 @@
     <h2>Low: {{ctrl.data.forecast.simpleforecast.forecastday[0].low.fahrenheit}}°F</h2>
   </div>
 
+	<div class="item">
+		<h2>5 Day Forecast:</h2>
+		<h3>{{day.weekday}}: {{day.conditions}}</h3>
+
+		<div class="list" ng-repeat="day in ctrl.data.forecast.simpleforecast.forecastday">
+
+	    <a class="item item-thumbnail-left" href="#">
+	      <img src="css/imgs/icons/{{day.icon}}.svg">
+	      <h2>{{day.date.weekday}}:</h2>
+	      <p>{{day.conditions}}</p>
+	      <p>HIGH {{day.high.fahrenheit}}</p>
+	      <p>LOW {{day.low.fahrenheit}}</p>
+	    </a>
+		</div>
+  </div>
+
+
   <div class="item">
     <h2>Previous Searches</h2>
     <p ng-repeat="(key, value) in ctrl.searchHistory" ng-click="ctrl.callAPIWithLatLong({{value.lat}}, {{value.lng}})">{{key}}</p>
