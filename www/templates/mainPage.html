@@ -1,11 +1,9 @@
 <!-- Main Ctrl as Ctrl -->
-
-
-
+<ion-scroll>
 <div class="list card">
 
   <div class="item">
-    <h1>{{ctrl.data.current_observation.display_location.city}} {{ctrl.data.current_observation.temp_f}}°F</h1>
+    <h2>{{ctrl.data.current_observation.display_location.city}} {{ctrl.data.current_observation.temp_f}}°F</h2>
     <h2>Feels Like: {{ctrl.data.current_observation.feelslike_f}}°F</h2>
     <h4>{{ctrl.data.current_observation.observation_time}}</h4>
   </div>
@@ -26,8 +24,14 @@
     <h2>Low: {{ctrl.data.forecast.simpleforecast.forecastday[0].low.fahrenheit}}°F</h2>
   </div>
 
+  <div class="item">
+    <h2>Previous Searches</h2>
+    <p ng-repeat="(key, value) in ctrl.searchHistory" ng-click="ctrl.callAPIWithLatLong({{value.lat}}, {{value.lng}})">{{key}}</p>
+  </div>
+
 
 </div>
+</ion-scroll>
 
 
 

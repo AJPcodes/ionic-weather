@@ -29,12 +29,37 @@ angular.module('weather', ['ionic', 'weather.controllers'])
 
 .config(function ($stateProvider, $urlRouterProvider){
 
-    $stateProvider.state('root', {
-      url: '/',
-      templateUrl: 'templates/mainPage.html',
-      controller: 'MainCtrl as ctrl'
+    // $stateProvider.state('weather', {
+    //   url: '/weather',
+    //   abtract: true,
+    //   templateUrl: 'templates/static.html',
+    //   controller: 'MainCtrl as ctrl'
+    // }),
 
+    $stateProvider.state('main', {
+      url: '/main',
+      templateUrl: 'templates/mainPage.html',
+      // controller: 'MainCtrl as ctrl'
     });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/main');
 })
+
+  // // setup an abstract state for the tabs directive
+  //   .state('tab', {
+  //   url: '/tab',
+  //   abstract: true,
+  //   templateUrl: 'templates/tabs.html'
+  // })
+
+  // // Each tab has its own nav history stack:
+
+  // .state('tab.dash', {
+  //   url: '/dash',
+  //   views: {
+  //     'tab-dash': {
+  //       templateUrl: 'templates/tab-dash.html',
+  //       controller: 'DashCtrl'
+  //     }
+  //   }
+  // })

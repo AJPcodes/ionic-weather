@@ -24,19 +24,23 @@
 
   </head>
   <body ng-app="weather">
-
-    <ion-pane>
-      <ion-header-bar class="bar-dark">
-        <h1 class="title">Ionic Weather   <i class="icon ion-search"></i></h1>
-      </ion-header-bar>
-        <ion-content>
+    <ion-pane ng-controller="MainCtrl as ctrl">
+      <div class="bar bar-header bar-dark item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="ctrl.searchQuery" ng-keypress="ctrl.startSearch($event)">
+        </label>
+        <button class="button button-clear" ng-click="ctrl.search()">
+          Search
+        </button>
+      </div>
+        <ion-content class="has-header">
           <ion-nav-view>
           </ion-nav-view>
         </ion-content>
       <ion-footer-bar class="bar-dark">
-        <h1 class="title">Powered By: <a href="http://www.wunderground.com/"><img style="width: 65px; height: 40px;" src="http://icons.wxug.com/graphics/wu2/logo_130x80.png" alt="www.wunderground.com"></a></h1>
+        <h1 class="title">Powered By: Weather Underground <a href="http://www.wunderground.com/"><img style="width: 65px; height: 40px;" src="http://icons.wxug.com/graphics/wu2/logo_130x80.png" alt="www.wunderground.com"></a></h1>
       </ion-footer-bar>
     </ion-pane>
-
   </body>
 </html>
