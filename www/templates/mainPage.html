@@ -5,24 +5,25 @@
 <div class="list card">
 
   <div class="item">
-    <h1>Temperature: {{ctrl.data.currently.temperature}}°F</h1>
-    <h4>Feels Like: {{ctrl.data.currently.apparentTemperature}}°F</h4>
-    <h2>{{ctrl.data.currently.summary}}</h2>
+    <h1>{{ctrl.data.current_observation.display_location.city}} {{ctrl.data.current_observation.temp_f}}°F</h1>
+    <h2>Feels Like: {{ctrl.data.current_observation.feelslike_f}}°F</h2>
+    <h4>{{ctrl.data.current_observation.observation_time}}</h4>
   </div>
 
 	<div class="item item-image">
-    <img class="full-image" src="css/imgs/icons/{{ctrl.data.currently.icon}}.svg" style="height: 200px; width: 200px;">
+    <img class="full-image" src="css/imgs/icons/{{ctrl.data.current_observation.icon}}.svg" style="height: 200px; width: 200px;">
   </div>
 
   <div class="item">
-    <h3>
-      Forecast: {{ctrl.data.hourly.summary}}
+    <div class="item item-text-wrap">
+      <h3>
+      Forecast: {{ctrl.data.forecast.txt_forecast.forecastday[0].fcttext}}
     </h3>
   </div>
 
 	<div class="item">
-    <h2>High: {{ctrl.data.daily.data[0].apparentTemperatureMax}}</h2>
-    <h2>Low: {{ctrl.data.daily.data[0].apparentTemperatureMin}}</h2>
+    <h2>High: {{ctrl.data.forecast.simpleforecast.forecastday[0].high.fahrenheit}}°F</h2>
+    <h2>Low: {{ctrl.data.forecast.simpleforecast.forecastday[0].low.fahrenheit}}°F</h2>
   </div>
 
 

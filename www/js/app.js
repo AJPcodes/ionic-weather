@@ -1,6 +1,8 @@
 // Ionic Starter App
 
 //my Forecast.io API Key  6ce1f2b19c500b6653ff0068b9b900a0
+//wunderground 5650f6ac11bcb150  email yat97832@iaoss.com password 123456
+
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
