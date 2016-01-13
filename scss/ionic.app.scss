@@ -18,6 +18,33 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+body, h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Oswald", sans-serif;
+}
+
+div.pane.list {
+	background-color: black;
+}
+
+ion-nav-view.view-container {
+	background-color: black;
+}
+
+
+div.card {
+		background-image: url("imgs/backgroundEarth.jpg");
+		background-size: 880px 640px;
+  	background-repeat: no-repeat;
+	}
+
+div.item {
+	background-color: rgba(255,255,255,0.5);
+	color: white;
+}
