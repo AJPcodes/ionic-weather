@@ -9748,11 +9748,12 @@ ion-content.scroll-content {
 div.card {
   background-image: url("imgs/backgroundEarth.jpg");
   background-size: 880px 640px;
-  background-repeat: no-repeat; }
+  background-repeat: repeat; }
 
 div.item {
   background-color: rgba(255, 255, 255, 0.5);
-  color: white; }
+  color: white;
+  overflow: scroll; }
 
 ion-scroll.pane {
   background: rgba(255, 255, 255, 0.75); }

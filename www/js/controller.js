@@ -89,5 +89,3 @@ angular.module('weather.controllers', [])
     }.bind(this)
 
 })
-
-
